@@ -14,8 +14,7 @@ def dot_product(v1, v2):
     
     result = 0
     for i in range(len(v1)):
-        result += (v1[i] + v2[i])
-
+        result += (v1[i] * v2[i])
     return result
     
 def cosine_similarity(v1, v2):
@@ -38,7 +37,7 @@ def cosine_similarity(v1, v2):
     v1_norm = np.linalg.norm(v1)
     v2_norm = np.linalg.norm(v2)
 
-    result = numerator / (v1_norm + v2_norm)
+    result = numerator / (v1_norm * v2_norm)
 
     return result
     
