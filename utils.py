@@ -1,31 +1,41 @@
 ## Please fill in all the parts labeled as ### YOUR CODE HERE
 
 import numpy as np
-import pytest
-from utils import *
 
-def test_dot_product():
-    vector1 = np.array([1, 2, 3])
-    vector2 = np.array([4, 5, 6])
-    
-    result = dot_product(vector1, vector2)
-    
-    assert result == 32, f"Expected 32, but got {result}"
-    
-def test_cosine_similarity():
+def dot_product(v1, v2):
+    '''
+    v1 and v2 are vectors of same shape.
+    return the scalar dor product of the two vectors.
+    # Hint: use `np.dot`.
+    '''
     ### YOUR CODE HERE
     
-    result = ### YOUR CODE HERE
+def cosine_similarity(v1, v2):
+    '''
+    v1 and v2 are vectors of same shape.
+    Return the cosine similarity between the two vectors.
     
-    expected_result = ### YOUR CODE HERE
+    # Note: The cosine similarity is a commonly used similarity 
+    metric between two vectors. It is the cosine of the angle between 
+    two vectors, and always between -1 and 1.
     
-    assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
-
-def test_nearest_neighbor():
+    # The formula for cosine similarity is: 
+    # (v1 dot v2) / (||v1|| * ||v2||)
+    
+    # ||v1|| is the 2-norm (Euclidean length) of the vector v1.
+    
+    # Hint: Use `dot_product` and `np.linalg.norm`.
+    '''
     ### YOUR CODE HERE
     
-    result = ### YOUR CODE HERE
+def nearest_neighbor(target_vector, vectors):
+    '''
+    target_vector is a vector of shape d.
+    vectors is a matrix of shape N x d.
+    return the row index of the vector in vectors that is closest to 
+    target_vector in terms of cosine similarity.
     
-    expected_index = ### YOUR CODE HERE
-    
-    assert result == expected_index, f"Expected index {expected_index}, but got {result}"
+    # Hint: You should use the cosine_similarity function that you already wrote.
+    # Hint: For this lab, you can just use a for loop to iterate through vectors.
+    '''
+    ### YOUR CODE HERE
