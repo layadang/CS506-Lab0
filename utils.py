@@ -55,8 +55,10 @@ def nearest_neighbor(target_vector, vectors):
     best_index = 0
     best_similarity = -1    # for comparison 
 
-    for i, vector in enumerate(vectors):
+    for i, vector in enumerate(vectors): # go through columns in matrix vectors
+
         similarity = cosine_similarity(target_vector, vector)
+
         if similarity > best_similarity:
             best_similarity = similarity
             best_index = i
