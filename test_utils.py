@@ -18,7 +18,7 @@ def test_cosine_similarity():
     vector2 = np.array([0, 0, 1])
     
     result = cosine_similarity(vector1, vector2)
-    expected_result = (1 * 1) / (1 * 1)
+    expected_result = 0
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
@@ -26,10 +26,9 @@ test_cosine_similarity()
 
 def test_nearest_neighbor():
     vector1 = np.array([1, 0, 0])
-    vector2 = np.array([0, 0, 1], [1, 0, 0])
+    vector2 = np.array([[0, 0, 1], [1, 0, 0]])
     
     result = nearest_neighbor(vector1, vector2)
-    
     expected_index = 1
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
